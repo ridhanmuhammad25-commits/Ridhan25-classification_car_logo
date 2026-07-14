@@ -5,3 +5,4 @@ pillow
 matplotlib
 pandas
 opencv-python-headless
+seaborn

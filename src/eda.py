@@ -3,6 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import os
+from PIL import Image
 
 BASE_DIR = os.path.dirname(__file__)
 CSV_PATH = os.path.join(BASE_DIR, "df_counts.csv")
@@ -11,17 +12,23 @@ CSV_PATH = os.path.join(BASE_DIR, "df_counts.csv")
 def run():
 
     st.set_page_config(
-        page_title="Car Logo Classification",
+        page_title="Car Classification",
         page_icon="🚗",
         layout="centered"
     )
 
-    st.title("🚗 Car Logo Classification")
+    st.markdown(
+    "<h1 style='text-align: center;'>🚗 Car Classification</h1>",
+    unsafe_allow_html=True
+    )
+    img = Image.open(os.path.join('src','title.jpg'))
+    st.image(img, caption = '')
+    st.subheader("Data set Overview")
     st.markdown(
         """
-        Welcome to the **Car Logo Classification** application.
+        Welcome to the **Car Classification** application.
 
-        This application can classify car logos into **4 brands**:
+        This application can classify car into **5 brands**:
         - 🚘 BMW
         - ⭐ Mercedes
         - 🚙 Toyota
