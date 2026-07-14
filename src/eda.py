@@ -13,12 +13,12 @@ def run():
 
     st.set_page_config(
         page_title="Car Classification",
-        page_icon="🚗",
+        page_icon="🚘",
         layout="centered"
     )
 
     st.markdown(
-    "<h1 style='text-align: center;'>🚗 Car Classification</h1>",
+    "<h1 style='text-align: center;'>🚘 Car Classification</h1>",
     unsafe_allow_html=True
     )
     img = Image.open(os.path.join('src','title.jpg'))
@@ -29,10 +29,11 @@ def run():
         Welcome to the **Car Classification** application.
 
         This application can classify car into **5 brands**:
-        - 🚘 BMW
-        - ⭐ Mercedes
-        - 🚙 Toyota
-        - 🏁 Bentley
+        - 🚗 BMW
+        - 🟀 Mercedes
+        - 🚓 Toyota
+        - 🚌 Bentley
+        - 🚛 Audi
 
         Below is the distribution of training images used for each class.
         """
